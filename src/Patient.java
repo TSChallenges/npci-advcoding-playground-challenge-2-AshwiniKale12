@@ -17,29 +17,29 @@ class Patient {
     }
 
     // Getter methods for name, age, gender, symptoms, treatment, appointmentDay
-    // TODO
+    
     public String getName(){
-        return name;
+        return this.name;
     }
 
     public int getAge(){
-        return age;
+        return this.age;
     }
     public String getGender()
     {
-        return gender;
+        return this.gender;
     }
     public String getSymptoms(){
-        return symptoms;
+        return this.symptoms;
     }
     public String getTreatment(){
-        return treatment;
+        return this.treatment;
     }
     public String getAppointmentDay(){
-        return appointmentDay;
+        return this.appointmentDay;
     }
     // Setter methods for treatment, appointmentDay
-    // TODO
+   
 
     public void setName(String name){
         this.name = name;

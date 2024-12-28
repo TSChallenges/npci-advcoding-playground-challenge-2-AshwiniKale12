@@ -18,10 +18,48 @@ class Patient {
 
     // Getter methods for name, age, gender, symptoms, treatment, appointmentDay
     // TODO
+    public String getName(){
+        return name;
+    }
 
+    public int getAge(){
+        return age;
+    }
+    public String getGender()
+    {
+        return gender;
+    }
+    public String getSymptoms(){
+        return symptoms;
+    }
+    public String getTreatment(){
+        return treatment;
+    }
+    public String getAppointmentDay(){
+        return appointmentDay;
+    }
     // Setter methods for treatment, appointmentDay
     // TODO
 
+    public void setName(String name){
+        this.name = name;
+    }
+    public void setAge(int age){
+        this.age = age;
+    }
+    public void setGender(String gender){
+        this.gender = gender;
+    }
+    public void setSymptoms(String symptoms){
+        this.symptoms = symptoms;
+    }
+
+    public void setTreatment(String treatment){
+        this.treatment = treatment;
+    }
+    public void setAppointmentDay(String appointmentDay){
+        this.appointmentDay = appointmentDay;
+    }
     
     /* The below equals() and hashCode() methods are crucial for the proper functioning of 
        collections like HashSet, HashMap, and other hash-based collections. */

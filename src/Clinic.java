@@ -21,7 +21,7 @@ class Clinic {
     public void admitPatient(Patient patient) {
         // Add the patient to the queue and print "Patient <name> admitted."
 
-        // TODO
+      
         if(admittedPatients.contains(patient)){
             System.out.println("Patient " + patient.getName() + "is already admitted.");
         }else{
@@ -38,7 +38,7 @@ class Clinic {
         // Give appointment to maximum 3 patients per day.
         // Once appointment is given to a patient, add that patient to `admittedPatients` set. Also, print "Scheduled <name> on <appointmentDay>"
 
-        // TODO
+
 
         Map<String ,List<Patient>> dailyAppointment = new HashMap<>();
         int day = 1;
@@ -69,13 +69,13 @@ class Clinic {
         // Provide treatment to a patient only if the patient is admitted. Print "Treatment provided to <name>: <treatment>"
         // Else print "Patient not found in the admitted list."
         
-        // TO
+ 
 
         if(admittedPatients.conatins(patient)){
             patient.setTreatment(treatment);
             System.out.println("Treatment provided to " + patient.getName() + ":" + treatment);
         }else{
-            System.out.println("Patient not found in the admitted list);
+            System.out.println("Patient not found in the admitted list");
         }
     }
 
@@ -85,24 +85,35 @@ class Clinic {
         // Print patient details only if the patient is admitted.
         // Else print "Patient not found in the admitted list."
         
-        // TODO
-    }
+    //    if(appointPatiens.contains(patient)){
+    //     System.out.println("Patient Details:");
+    //         System.out.println("Name:" + patient.getName());
+    //          System.out.println("Age:" + patient.getAge());
+    //          System.out.println("Gender:" + patient.getGender());
+    //          System.out.println("Symptoms:" + patient.getSymptoms());
+    //         System.out.println("Treatment:" + (patient.getTreatment()!= null ? patient.getTreatment(): "Not yet provided"));
+    //          System.out.println("Appointment Day:" + (patient.getAppointmentDay()!= null ? patient.getAppointmentDay():"Not scheduled"));
+        
+             
+    // }else{
+    //         System.out.println("Patient is not found in admitted list.");
 
+    // }
+        if(admittedPatients.contains(patient)){
+            System.out.println("Patient Details: "+ patient);
+        }else{
+            System.out.println("Patient is not found in admitted list.");
+        }
+    }
 
     // Get the appointment details of a patient
     public void getAppointmentDetails(Patient patient) {
         // Print appointment details of a patient only if the patient is admitted. "Appointment Details: <name> is scheduled on <appointmentDay>"
         // Else print "Patient not found in the admitted list."
-        
-        // TODO
+
 
         if(admittedPatients.contains(patient)){
-            System.out.println("Patient Details:");
-            System.out.println("Name:" + patient.getName());
-             System.out.println("Age:" + patient.getAge());
-             System.out.println("Gender:" + patient.getGender());
-             System.out.println("Symptoms:" + patient.getSymptoms());
-             System.out.println("Treatment:" + (patient.getTreatment()!= null ? patient.getTreatment(): "Not yet provided"));
+            System.out.println("Treatment:" + (patient.getTreatment()!= null ? patient.getTreatment(): "Not yet provided"));
              System.out.println("Appointment Day:" + (patient.getAppointmentDay()!= null ? patient.getAppointmentDay():"Not scheduled"));
         }else{
              System.out.println("Patient is not found in admitted list.");
@@ -115,10 +126,8 @@ class Clinic {
     public void dischargePatient(Patient patient) {
         // Remove the patient from admitted patients list. Print "Patient <name> discharged."
 
-        // TODO
         if(admittedPatients.contains(patient)){
             admittedPatients.remove(patient);
-            patientQueue.remove(patient);
             }
             System.out.println("Patient "+ patient.getName() + "discharged");
         }else{

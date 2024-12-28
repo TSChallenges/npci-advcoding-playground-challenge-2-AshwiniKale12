@@ -119,12 +119,6 @@ class Clinic {
         if(admittedPatients.contains(patient)){
             admittedPatients.remove(patient);
             patientQueue.remove(patient);
-            if(patient.getAppointmentDay()!= null){
-                List<Patient> appointments = appointmentSchedule.get(patient.getAppointmentDAY());
-                if(appointments != null ){
-                    appointments.remove(patient);
-                        
-                }
             }
             System.out.println("Patient "+ patient.getName() + "discharged");
         }else{

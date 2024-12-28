@@ -22,6 +22,13 @@ class Clinic {
         // Add the patient to the queue and print "Patient <name> admitted."
 
         // TODO
+        if(admittedPatients.contains(patient)){
+            System.out.println("Patient " + patient.getName() + "is already admitted.");
+        }else{
+            admittedPatients.add(patient);
+            patientQueue.add(patient);
+            System.out.println("Patient " + patient.getName() + " admitted.");
+        }
     }
     
 
@@ -32,6 +39,18 @@ class Clinic {
         // Once appointment is given to a patient, add that patient to `admittedPatients` set. Also, print "Scheduled <name> on <appointmentDay>"
 
         // TODO
+
+        Map<String ,List<Patient>> dailyAppointment = new HashMap<>();
+        int day = 1;
+        while(!patientQueue.isEmpty()){
+            String currentDay = "Day " + day;
+            List<Patient> appointments = dailyAppointments.getOrDefault(currentDay , new ArrayList<>());
+            while(!patientQueue.isEmpty() && appointments.size() < 3){
+                Patient patient = patientQueue.poll();
+                appointment.add(patient);
+                appointments.set
+            }
+        }
     }
 
 
